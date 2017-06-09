@@ -11,11 +11,14 @@
 <body>
 	<main role="main" id=root class="movie-wrapper">
 		{{ title }}
-		<movie></movie>
+		<movie :selected-movie="selectedMovie"></movie>
 	</main>
 
 	<script type="text/x-template" id="single-movie">
-		<div>Movie this is template</div>
+		<div>
+			<div>Movie this is template</div>
+			<div>{{ selectedMovie.Error }}</div>
+		</div>
 	</script>
 
 	<script src="https://unpkg.com/vue@2.3.4/dist/vue.js"></script>
